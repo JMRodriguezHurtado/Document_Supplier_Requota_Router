@@ -1,0 +1,30 @@
+version: 0.2
+env:
+  exported-variables:
+    - APP_NAME
+    - APP_VERSION
+    - APP_ENVIRONMENT
+    - ARTIFACT_NAME 
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - npm install -g
+      - n 22
+      - node -v
+  pre_build:
+    commands:
+      - APP_NAME=$(node -p -e "require('./package.json').name")
+      - APP_VERSION=$(node -p -e "require('./package.json').version")
+      - npm install
+      - npm run build
+  build:
+    commands:
+      - aws s3 cp s3://$BUCKET_NAME/config/template.json ./template.json
+      - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET_NAME --output-template-file outputtemplate.yml --kms-key-id $KMS_KEY_ID --s3-prefix $APP_NAME/Artifacts
+artifacts:
+  files:
+    - template.yml
+    - outputtemplate.yml
+    - template.json

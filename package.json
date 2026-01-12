@@ -1,0 +1,36 @@
+{
+  "name": "radar-ws-es-business-rules-documents",
+  "version": "1.0.0",
+  "description": "Aplicativo para el manejo de cargas y descargas de documentos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon ./index.js",
+    "build": "esbuild index.js --bundle --platform=node --outdir=dist --minify --log-level=error",
+    "run start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/radar-ws-es-business-rules-documents"
+  },
+  "author": "JMRH",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-lambda": "^3.911.0",
+    "@aws-sdk/client-secrets-manager": "^3.876.0",
+    "aws-serverless-express": "^3.4.0",
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.1",
+    "esbuild": "^0.25.9",
+    "express": "^5.1.0",
+    "json-server": "^1.0.0-beta.3",
+    "jsonwebtoken": "^9.0.2",
+    "lru-cache": "^11.1.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
