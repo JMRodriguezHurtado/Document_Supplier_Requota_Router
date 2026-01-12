@@ -1,6 +1,6 @@
 # Document_Reqoute_Supplier_API
 
- - Business-rules-documents, este es un router para las APIs: "RE-QUOTA" API, "DOCUMENTS" API, "PAGO PROVEEDORES" API y "CLIENTS (MDG)" API. Routea las requests a la API correspondiente. Este proyecto trabaja utilizando un unico punto de entrada para todas las peticiones, Single Entry Endpoint (S.E.E.) utilizando metodos de Back For Front (B.F.F.), para maximizar los recursos de AWS Lambda.
+ - Document_Reqoute_Supplier_API, este es un router para las APIs: "RE-QUOTA" API, "DOCUMENTS" API, "PAGO PROVEEDORES" API y "CLIENTS (MDG)" API. Routea las requests a la API correspondiente. Este proyecto trabaja utilizando un unico punto de entrada para todas las peticiones, Single Entry Endpoint (S.E.E.) utilizando metodos de Back For Front (B.F.F.), para maximizar los recursos de AWS Lambda.
 
 ## Getting Started
 
